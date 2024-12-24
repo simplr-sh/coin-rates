@@ -12,6 +12,8 @@
   <img style="vertical-align: middle;" src="./readme-assets/coin-rates-banner.png">
 </div>
 
+![Coin Rates Github Social Preview](./readme-assets//github-social-preview.jpg)
+
 ## Features
 
 - 🚀 **95+ Top Cryptocurrencies** - All major tokens supported
