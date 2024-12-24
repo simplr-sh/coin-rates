@@ -4,18 +4,37 @@
       <a href="https://github.com/simplr-sh/coin-rates">
         Coin Rates
       </a>
-    </span>
+    </h1>
+    <p align="center"><strong>Simple & Fast Cryptocurrency Rate API</strong></p>
 </div>
 
+<div align="center">
+  <img style="vertical-align: middle;" src="./readme-assets/coin-rates-banner.png">
+</div>
 
-### Super Simplr conversion rates API. 95 Top cryptocurrency USD conversion rates. No bandwidth or request limits. Completely free & open source for all to use. 30 seconds between updates per token.
+## Features
 
-<img style="vertical-align: middle;" src="./readme-assets/coin-rates-banner.png" >
+- 🚀 **95+ Top Cryptocurrencies** - All major tokens supported
+- ⚡ **Real-time Rates** - Updates every 30 seconds
+- 🌐 **Global Edge Network** - Powered by Cloudflare
+- 🆓 **100% Free** - No API keys, no rate limits
+- 📊 **JSON & CSV Support** - Flexible data formats
+- ⚙️ **Simple Integration** - Just HTTP GET requests
 
-![About Coin Logos](./readme-assets/github-social-preview.jpg)
+## Quick Start
 
+```bash
+# Get all supported tokens
+curl https://coin-rates.simplr.sh/api/tokens.json
 
-## API Endpoints
+# Get Bitcoin's current rate
+curl https://coin-rates.simplr.sh/api/rates/bitcoin
+
+# Get Ethereum's current rate
+curl https://coin-rates.simplr.sh/api/rates/ethereum
+```
+
+## API Documentation
 
 ### Get All Available Tokens
 
@@ -89,6 +108,26 @@ Error Response (Invalid Token ID):
 - 30-second cache per token
 - Free for all usage
 
+## Integration Examples
+
+### JavaScript/Node.js
+```javascript
+// Fetch Bitcoin rate
+const response = await fetch('https://coin-rates.simplr.sh/api/rates/bitcoin');
+const data = await response.json();
+console.log(`Bitcoin price: $${data.btc.usd}`);
+```
+
+### Python
+```python
+import requests
+
+# Fetch Ethereum rate
+response = requests.get('https://coin-rates.simplr.sh/api/rates/ethereum')
+data = response.json()
+print(f"Ethereum price: ${data['eth']['usd']}")
+```
+
 ## Development
 
 ### Prerequisites
@@ -138,3 +177,23 @@ No environment variables required for basic setup.
 - Updates automatically every 30 seconds
 - Uses Cloudflare's edge network for global distribution
 - Zero configuration required
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+- 🌟 Star this repo if you find it useful
+- 🐛 Report bugs by creating an issue
+- 💡 Request features through issues
